@@ -1,0 +1,631 @@
+{
+	"info": {
+		"_postman_id": "0b87d8fd-95d9-46b6-8eaa-4a6177e4c892",
+		"name": "express-backend-sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24270621"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"ahmad@domain6.com\",\n    \"name\":\"ahmad\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/v1/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"ahmad@domain1.com\",\n    \"name\":\"ahmad\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/v1/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"user"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "155"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"9b-vBdouWtOBcPMfyfiAevP06Cc8PA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Nov 2023 13:35:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"name\": \"ahmad\",\n    \"email\": \"ahmad@domain1.com\",\n    \"_id\": \"6546489408f20059cc26791c\",\n    \"createdAt\": \"2023-11-04T13:35:16.638Z\",\n    \"updatedAt\": \"2023-11-04T13:35:16.638Z\"\n}"
+								},
+								{
+									"name": "err: Email already in use",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"ahmad@domain1.com\",\n    \"name\":\"ahmad\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/v1/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"user"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "64"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"40-gvqOi1HLpXeWoQKsgAiIhk9hD+I\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Nov 2023 13:35:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_code\": \"001001\",\n    \"message\": \"Email already in use\",\n    \"status\": 400\n}"
+								},
+								{
+									"name": "err: field is required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\":\"ahmad@domain1.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/v1/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"user"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "html",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/html; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "23"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"17-g68XGLaJT00krbCHLzJjrIjapo0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Nov 2023 13:36:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "\"body.name\" is required"
+								}
+							]
+						},
+						{
+							"name": "search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/v1/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"user"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "@domain2",
+											"description": "A string filter will be applied to all string fields in the user document (accept regex)",
+											"disabled": true
+										},
+										{
+											"key": "filter[name]",
+											"value": "ahmad",
+											"description": "A string filter will be applied on user's name (accept regex)",
+											"disabled": true
+										},
+										{
+											"key": "filter[email]",
+											"value": "@domain",
+											"description": "A string filter will be applied on user's email (accept regex)",
+											"disabled": true
+										},
+										{
+											"key": "filter[email][]",
+											"value": "ahmad@domain1",
+											"description": "An array of email-like strings is used to find users who have similar emails.",
+											"disabled": true
+										},
+										{
+											"key": "select[name]",
+											"value": "1",
+											"description": "An object of selected fields is represented in the form of { [fieldName: string]: 0 | 1 }, where 0 indicates exclusion and 1 indicates inclusion.",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "-createdAt",
+											"description": "A string indicates the sorting fields, each field name can be prefixed with - for descending sort.",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "2",
+											"description": "A number indicates the page size.",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "3",
+											"description": "A number indicates the page start.",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"description": "A number indicates the page number (can be provided instead of the offset).",
+											"disabled": true
+										},
+										{
+											"key": "filter[createdAt][$gte]",
+											"value": "2023-11-04",
+											"description": "A filter[createdAt|updatedAt] is DateRange objects in the form of { [key: '$gte' | '$gt' | '$lte' | '$lt']: Date }",
+											"disabled": true
+										},
+										{
+											"key": "filter[updatedAt][$lte]",
+											"value": "2023-11-05",
+											"disabled": true
+										},
+										{
+											"key": "filter[createdAt][$gt]",
+											"value": "2023-11-05",
+											"disabled": true
+										},
+										{
+											"key": "filter[createdAt][$lt]",
+											"value": "2023-11-05",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success with sort applied",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/v1/user?sort=-createdAt",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"user"
+											],
+											"query": [
+												{
+													"key": "query",
+													"value": "@domain2",
+													"description": "A string filter will be applied to all string fields in the user document (accept regex)",
+													"disabled": true
+												},
+												{
+													"key": "filter[name]",
+													"value": "ahmad",
+													"description": "A string filter will be applied on user's name (accept regex)",
+													"disabled": true
+												},
+												{
+													"key": "filter[email]",
+													"value": "@domain",
+													"description": "A string filter will be applied on user's email (accept regex)",
+													"disabled": true
+												},
+												{
+													"key": "filter[email][]",
+													"value": "ahmad@domain1",
+													"description": "An array of email-like strings is used to find users who have similar emails.",
+													"disabled": true
+												},
+												{
+													"key": "select[name]",
+													"value": "1",
+													"description": "An object of selected fields is represented in the form of { [fieldName: string]: 0 | 1 }, where 0 indicates exclusion and 1 indicates inclusion.",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "-createdAt",
+													"description": "A string indicates the sorting fields, each field name can be prefixed with - for descending sort."
+												},
+												{
+													"key": "limit",
+													"value": "2",
+													"description": "A number indicates the page size.",
+													"disabled": true
+												},
+												{
+													"key": "offset",
+													"value": "3",
+													"description": "A number indicates the page start.",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "2",
+													"description": "A number indicates the page number (can be provided instead of the offset).",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][$gte]",
+													"value": "2023-11-04",
+													"description": "A filter[createdAt|updatedAt] is DateRange objects in the form of { [key: '$gte' | '$gt' | '$lte' | '$lt']: Date }",
+													"disabled": true
+												},
+												{
+													"key": "filter[updatedAt][$lte]",
+													"value": "2023-11-05",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][$gt]",
+													"value": "2023-11-05",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][$lt]",
+													"value": "2023-11-05",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1007"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3ef-yZEH9uGp9LeoaUfZnwHTeWIhCpE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Nov 2023 14:40:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"_id\": \"6546497808f20059cc267930\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain6.com\",\n            \"createdAt\": \"2023-11-04T13:39:04.974Z\",\n            \"updatedAt\": \"2023-11-04T13:39:04.974Z\"\n        },\n        {\n            \"_id\": \"6546497408f20059cc26792d\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain5.com\",\n            \"createdAt\": \"2023-11-04T13:39:00.198Z\",\n            \"updatedAt\": \"2023-11-04T13:39:00.198Z\"\n        },\n        {\n            \"_id\": \"6546497008f20059cc26792a\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain4.com\",\n            \"createdAt\": \"2023-11-04T13:38:56.048Z\",\n            \"updatedAt\": \"2023-11-04T13:38:56.048Z\"\n        },\n        {\n            \"_id\": \"6546496d08f20059cc267927\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain3.com\",\n            \"createdAt\": \"2023-11-04T13:38:53.018Z\",\n            \"updatedAt\": \"2023-11-04T13:38:53.018Z\"\n        },\n        {\n            \"_id\": \"6546496a08f20059cc267924\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain2.com\",\n            \"createdAt\": \"2023-11-04T13:38:50.233Z\",\n            \"updatedAt\": \"2023-11-04T13:38:50.233Z\"\n        },\n        {\n            \"_id\": \"6546496608f20059cc267921\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain1.com\",\n            \"createdAt\": \"2023-11-04T13:38:46.362Z\",\n            \"updatedAt\": \"2023-11-04T13:38:46.362Z\"\n        }\n    ],\n    \"meta\": {\n        \"currentPage\": 1,\n        \"lastPage\": 1,\n        \"perPage\": 20,\n        \"total\": 6\n    }\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/v1/user",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"user"
+											],
+											"query": [
+												{
+													"key": "query",
+													"value": "@domain2",
+													"description": "A string filter will be applied to all string fields in the user document (accept regex)",
+													"disabled": true
+												},
+												{
+													"key": "filter[name]",
+													"value": "ahmad",
+													"description": "A string filter will be applied on user's name (accept regex)",
+													"disabled": true
+												},
+												{
+													"key": "filter[email]",
+													"value": "@domain",
+													"description": "A string filter will be applied on user's email (accept regex)",
+													"disabled": true
+												},
+												{
+													"key": "filter[email][]",
+													"value": "ahmad@domain1",
+													"description": "An array of email-like strings is used to find users who have similar emails.",
+													"disabled": true
+												},
+												{
+													"key": "select[name]",
+													"value": "1",
+													"description": "An object of selected fields is represented in the form of { [fieldName: string]: 0 | 1 }, where 0 indicates exclusion and 1 indicates inclusion.",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "-createdAt",
+													"description": "A string indicates the sorting fields, each field name can be prefixed with - for descending sort.",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "2",
+													"description": "A number indicates the page size.",
+													"disabled": true
+												},
+												{
+													"key": "offset",
+													"value": "3",
+													"description": "A number indicates the page start.",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "2",
+													"description": "A number indicates the page number (can be provided instead of the offset).",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][$gte]",
+													"value": "2023-11-04",
+													"description": "A filter[createdAt|updatedAt] is DateRange objects in the form of { [key: '$gte' | '$gt' | '$lte' | '$lt']: Date }",
+													"disabled": true
+												},
+												{
+													"key": "filter[updatedAt][$lte]",
+													"value": "2023-11-05",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][$gt]",
+													"value": "2023-11-05",
+													"disabled": true
+												},
+												{
+													"key": "filter[createdAt][$lt]",
+													"value": "2023-11-05",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1007"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3ef-ZD7krOj4oY5gZGG8BI7fom0MiqA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 04 Nov 2023 14:41:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"_id\": \"6546496608f20059cc267921\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain1.com\",\n            \"createdAt\": \"2023-11-04T13:38:46.362Z\",\n            \"updatedAt\": \"2023-11-04T13:38:46.362Z\"\n        },\n        {\n            \"_id\": \"6546496a08f20059cc267924\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain2.com\",\n            \"createdAt\": \"2023-11-04T13:38:50.233Z\",\n            \"updatedAt\": \"2023-11-04T13:38:50.233Z\"\n        },\n        {\n            \"_id\": \"6546496d08f20059cc267927\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain3.com\",\n            \"createdAt\": \"2023-11-04T13:38:53.018Z\",\n            \"updatedAt\": \"2023-11-04T13:38:53.018Z\"\n        },\n        {\n            \"_id\": \"6546497008f20059cc26792a\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain4.com\",\n            \"createdAt\": \"2023-11-04T13:38:56.048Z\",\n            \"updatedAt\": \"2023-11-04T13:38:56.048Z\"\n        },\n        {\n            \"_id\": \"6546497408f20059cc26792d\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain5.com\",\n            \"createdAt\": \"2023-11-04T13:39:00.198Z\",\n            \"updatedAt\": \"2023-11-04T13:39:00.198Z\"\n        },\n        {\n            \"_id\": \"6546497808f20059cc267930\",\n            \"name\": \"ahmad\",\n            \"email\": \"ahmad@domain6.com\",\n            \"createdAt\": \"2023-11-04T13:39:04.974Z\",\n            \"updatedAt\": \"2023-11-04T13:39:04.974Z\"\n        }\n    ],\n    \"meta\": {\n        \"currentPage\": 1,\n        \"lastPage\": 1,\n        \"perPage\": 20,\n        \"total\": 6\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
