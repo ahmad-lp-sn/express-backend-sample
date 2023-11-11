@@ -6,7 +6,7 @@ This is an example of an Express.js backend project using TypeScript.
 
 Before you get started, make sure you have the following dependencies installed:
 
-1. [Node.js](https://nodejs.org) - You'll need Node.js to run this project.
+1. [Node.js v20.2.0](https://nodejs.org/en/blog/release/v20.2.0) - You'll need Node.js to run this project.
 2. [MongoDB](https://www.mongodb.com) - This project uses MongoDB as its database.
 
 ## Installation
