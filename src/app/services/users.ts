@@ -12,7 +12,7 @@ export const usersService = {
       throw errors.USER_ERR.USED_EMAIL
     }
 
-    return await usersRepository.create(userData)
+    return (await usersRepository.create(userData)).toObject()
   },
 
   search: async (query: UsersSearchQuery) => {
